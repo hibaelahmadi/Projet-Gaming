@@ -7,17 +7,26 @@ public class EndManager : MonoBehaviour
     public TextMeshProUGUI resultText;
     public GameObject quitterButton;
 
+    public AudioClip sonVictoire;
+    public AudioClip sonDefaite;
+
+    private AudioSource audioSource;
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         string result = PlayerPrefs.GetString("result");
 
         if (result == "WIN")
         {
             resultText.text = "Bravo ! Vous avez gagné !";
+            audioSource.PlayOneShot(sonVictoire);
         }
         else
         {
             resultText.text = "Dommage... Essayez encore !";
+            audioSource.PlayOneShot(sonDefaite);
         }
 
         quitterButton.SetActive(true);

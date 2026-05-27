@@ -2119,6 +2119,8 @@ MonoBehaviour:
   messageBonus: "Bonus trouv\xE9 ! Le mur est maintenant ouvert."
   murAOuvrir: {fileID: 1679223212}
   groupeBoxes: {fileID: 403816816}
+  sonVictoire: {fileID: 8300000, guid: 678cb0c08dab4e5449fc847fb1b5bb38, type: 3}
+  volume: 1
 --- !u!1 &244762304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,6 +2778,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
+  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2917,6 +2920,103 @@ MonoBehaviour:
   hauteur: 3
   distance: 3
   vitesseSuivi: 5
+--- !u!82 &330585549
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: feac50793603f094da31775ea3c56a65, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &340260103
 GameObject:
   m_ObjectHideFlags: 0
@@ -6371,6 +6471,8 @@ MonoBehaviour:
   messageBonus: "Bonus trouv\xE9 ! Le mur est maintenant ouvert."
   murAOuvrir: {fileID: 244762304}
   groupeBoxes: {fileID: 2139457959}
+  sonVictoire: {fileID: 8300000, guid: 678cb0c08dab4e5449fc847fb1b5bb38, type: 3}
+  volume: 1
 --- !u!65 &852987262
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7110,7 +7212,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb35e707a6d7f0345a797c89cdefd3b9, type: 2}
+  - {fileID: 2100000, guid: 9efdbcd54a9ec464595b3d2513ab06a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9731,6 +9833,7 @@ MonoBehaviour:
   texteFeedbackTexte: {fileID: 1142463217}
   texteTentatives: {fileID: 1985050509}
   panneauGameOver: {fileID: 2109797605}
+  sonBonneReponse: {fileID: 8300000, guid: 678cb0c08dab4e5449fc847fb1b5bb38, type: 3}
   mur: {fileID: 0}
   groupeBoxes: {fileID: 0}
 --- !u!4 &1430892143
@@ -9851,6 +9954,8 @@ MonoBehaviour:
   messageBonus: "Bonus trouv\xE9 ! Le mur est maintenant ouvert."
   murAOuvrir: {fileID: 1112033219}
   groupeBoxes: {fileID: 664830083}
+  sonVictoire: {fileID: 8300000, guid: 678cb0c08dab4e5449fc847fb1b5bb38, type: 3}
+  volume: 1
 --- !u!1001 &1456010719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10252,6 +10357,8 @@ MonoBehaviour:
   messageBonus: "Bonus trouv\xE9 ! Le mur est maintenant ouvert."
   murAOuvrir: {fileID: 1903625281}
   groupeBoxes: {fileID: 985963165}
+  sonVictoire: {fileID: 8300000, guid: 678cb0c08dab4e5449fc847fb1b5bb38, type: 3}
+  volume: 1
 --- !u!1 &1491020928
 GameObject:
   m_ObjectHideFlags: 0
@@ -13013,6 +13120,8 @@ MonoBehaviour:
   messageBonus: "Bonus trouv\xE9 ! Le mur est maintenant ouvert."
   murAOuvrir: {fileID: 348517519}
   groupeBoxes: {fileID: 280964151}
+  sonVictoire: {fileID: 8300000, guid: 678cb0c08dab4e5449fc847fb1b5bb38, type: 3}
+  volume: 1
 --- !u!65 &1885246488
 BoxCollider:
   m_ObjectHideFlags: 0

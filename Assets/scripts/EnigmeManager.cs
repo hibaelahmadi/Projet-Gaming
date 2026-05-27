@@ -22,6 +22,11 @@ public class EnigmeManager : MonoBehaviour
     public TextMeshProUGUI texteTentatives;
     public GameObject panneauGameOver;
 
+    [Header("Audio")]
+    public AudioClip sonBonneReponse;
+    private AudioSource audioSource;
+
+
     [HideInInspector] public GameObject mur;
 
     [HideInInspector] public GameObject groupeBoxes;
@@ -35,6 +40,11 @@ public class EnigmeManager : MonoBehaviour
 
     void Start()
     {
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+
         tentativesRestantes = 3;
         panneauQCM.SetActive(false);
         panneauTexte.SetActive(false);
@@ -79,6 +89,7 @@ public class EnigmeManager : MonoBehaviour
     {
         if (indexChoisi == questionActuelle.bonneReponseIndex)
         {
+            JouerSonBonneReponse();
             texteFeedbackQCM.text = "Bonne reponse ! Continue !";
             StartCoroutine(FermerPanneau(true));
         }
@@ -105,6 +116,7 @@ public class EnigmeManager : MonoBehaviour
 
         if (reponseJoueur == bonneReponse)
         {
+            JouerSonBonneReponse();
             texteFeedbackTexte.text = "Bonne reponse ! Continue !";
             StartCoroutine(FermerPanneau(true)); ;
         }
@@ -123,6 +135,12 @@ public class EnigmeManager : MonoBehaviour
                 champReponse.text = "";
             }
         }
+    }
+
+    void JouerSonBonneReponse()
+    {
+        if (audioSource != null && sonBonneReponse != null)
+            audioSource.PlayOneShot(sonBonneReponse);
     }
 
     IEnumerator FermerPanneau(bool bonneReponse)
